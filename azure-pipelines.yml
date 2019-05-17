@@ -15,14 +15,17 @@ steps:
     versionSpec: '>= 2.5'
 
 - script: |
-    TOKEN=ya29.GlsMB0mXvHc0XexrDRx4WTa7yzJP_2QhnRoej6I0RBIkqcmbu1HCHKR23TGvF5_K-30mnwOek3b-Q8doVuBxWt0Pqf5dG_cKA7nfFYa9diF9Ra7w7l4YpZ1wp9Ne
+    TOKEN=ya29.GlsMB11CmVnpfFDsO1HtSPGiXXtvpmWGm4wXBYVA_8jTm39QSioP4wla9vg-Heqp_fKGyzntAwERI-jzLgvIhddwXJKBlmnEbz0NL7lOxEp7_CN0mI7qNWEwGZfB
     APP_ID=anllfcfmhljbgbiiedpfibjfboehhmhb
+
+    curl \
+    -o eve-test.zip https://codeload.github.com/Resetyo/eve-test/zip/master
 
     curl \
     -H "Authorization: Bearer $TOKEN"  \
     -H "x-goog-api-version: 2" \
     -X PUT \
-    -T https://github.com/TriKro/eve-test/archive/master.zip \
+    -T eve-test.zip \
     -v \
     https://www.googleapis.com/upload/chromewebstore/v1.1/items/$APP_ID
 
