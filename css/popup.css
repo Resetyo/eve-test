@@ -1,0 +1,11 @@
+body {
+  min-width: 260px;
+  max-width: 400px;
+  height: auto;
+  padding: 30px 15px;
+  font-size: 1em;
+}
+
+.ev-popup-title {
+  margin-bottom: 20px;
+}

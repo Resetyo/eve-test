@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CalHelper</title>
+    <link rel="stylesheet" type="text/css" href="css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="css/popup.css">
+
+    <script src="js/libs/jquery.js"></script>
+    <script src="js/popup.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <h1 class="ev-popup-title">CalHelper</h1>
+      <p class="message"></p>
+    </div>
+
+    <br />
+
+    <a id="production-link" target="_blank">Production</a>
+    <div class="switch">
+      <input class="switch-input" id="production" value="production" type="radio" name="server-option">
+      <label class="switch-paddle" for="production"></label>
+    </div>
+
+    <a id="staging-link" target="_blank">Staging</a>
+    <div class="switch">
+      <input class="switch-input" id="staging" value="staging" type="radio" name="server-option">
+      <label class="switch-paddle" for="staging"></label>
+      Log in
+    </div>
+
+    Development
+    <div class="switch">
+      <input class="switch-input" id="development" value="development" type="radio" name="server-option">
+      <label class="switch-paddle" for="development"></label>
+    </div>
+
+    <hr />
+
+    Debug
+    <div class="switch">
+      <input class="switch-input" id="debug" type="checkbox" name="debug">
+      <label class="switch-paddle" for="debug"></label>
+    </div>
+    <button class="button is-hidden" id="sync">Synchronize calendars</button>
+  </body>
+</html>

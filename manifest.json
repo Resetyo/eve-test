@@ -1,0 +1,61 @@
+{
+  "name": "CalHerder-test",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "description": "CalHerder Helper",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://calendar.google.com/*",
+        "*://mail.google.com/mail/*"
+      ],
+      "css": [
+        "css/calendar.css",
+        "css/select2.css"
+      ],
+      "js": [
+        "js/libs/jquery.js",
+        "js/libs/select2.js",
+        "js/libs/select2-dropdownPosition.js",
+        "js/libs/arrive.js",
+        "js/libs/action_cable.js",
+        "js/content.js"
+      ]
+    }
+  ],
+  "background": { "scripts": [
+    "js/libs/jquery.js",
+    "js/background.js"
+  ]  },
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage",
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+      "144": "images/icon.png"
+    },
+  "web_accessible_resources": [
+      "js/content.js",
+      "css/calendar.css",
+      "dev.json"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "*://kromatic.ngrok.io/cable",
+      "*://kromatic1.ngrok.io/cable",
+      "*://kromatic2.ngrok.io/cable",
+      "*://kromatic3.ngrok.io/cable",
+      "*://kromatic4.ngrok.io/cable",
+      "*://kromatic5.ngrok.io/cable",
+      "*://staging.calherder.com/cable",
+      "*://eventherder-staging.herokuapp.com/cable",
+      "*://www.calherder.com/cable"
+    ]
+  }
+}

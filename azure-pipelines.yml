@@ -1,0 +1,36 @@
+# Ruby
+# Package your Ruby project.
+# Add steps that install rails, analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/ruby
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UseRubyVersion@0
+  inputs:
+    versionSpec: '>= 2.5'
+
+- script: |
+    TOKEN=ya29.GlsMB0mXvHc0XexrDRx4WTa7yzJP_2QhnRoej6I0RBIkqcmbu1HCHKR23TGvF5_K-30mnwOek3b-Q8doVuBxWt0Pqf5dG_cKA7nfFYa9diF9Ra7w7l4YpZ1wp9Ne
+    APP_ID=anllfcfmhljbgbiiedpfibjfboehhmhb
+
+    curl \
+    -H "Authorization: Bearer $TOKEN"  \
+    -H "x-goog-api-version: 2" \
+    -X PUT \
+    -T https://github.com/TriKro/eventherder-extension/archive/master.zip \
+    -v \
+    https://www.googleapis.com/upload/chromewebstore/v1.1/items/$APP_ID
+
+    curl \
+    -H "Authorization: Bearer $TOKEN"  \
+    -H "x-goog-api-version: 2" \
+    -H "Content-Length: 0" \
+    -X POST \
+    -v \
+    https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish
+  displayName: 'publish extension'

@@ -1,0 +1,95 @@
+/* Popup table */
+.calherder-tile {
+  padding: 5px 0;
+}
+
+/* Mimic Google Calendar styles in Event popup */
+.calherder-tile > .tile-label { height: 18px; line-height: 18px; color: #9b9b9b; font-size: 11px; font-weight: bold; }
+.calherder-tile > .tile-content { padding: 4px 0; }
+.calherder-tile > .tile-content > .calherder-button:hover { cursor: pointer; background-color: #f8f8f8; color: #333; border: 1px solid #c6c6c6; background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1); }
+
+.ch-action, .calherder-undo-btn {
+  background-color: rgb(45, 140, 255);
+  color: white !important;
+  border-width: 0px;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  padding: 6px 6px;
+  margin-left: -6px;
+  font-size: 12px !important;
+  line-height: 15px;
+  border-radius: 2px;
+  font-weight: 400 !important;
+  min-width: 0 !important;
+}
+.ch-action:hover, .calherder-undo-btn:hover {
+  cursor: pointer;
+  background-color: rgb(60, 155, 255) !important;
+}
+
+.ch-action:disabled, .calherder-undo-btn:disabled {
+  cursor: default !important;
+  background-color: #999 !important;
+}
+
+/* Overwrite Calendar's dropdown z-index */
+.gHQcAb { z-index: 20 !important; }
+
+.ch-fields-container {
+  min-height: 0;
+  position: relative;
+}
+
+.ch-fields-container.mH89We {
+  overflow: visible;
+}
+
+/* Select2 styles */
+.ev-popup-table {
+  display: table;
+  position: relative;
+}
+
+.ev-popup-table-cell {
+  display: table-cell;
+  width: 50%;
+  max-width: 184px;
+  position: relative;
+}
+
+.ev-event-field, .ev-company-field {
+  width: 100%;
+}
+
+.chosen-container {
+  width: 100% !important;
+}
+
+
+/* Limit the height of the results dropdown to avoid getting overlapped by calendar event headers */
+.select2-results {
+  max-height: 140px;
+  overflow-y: hidden;
+}
+
+.select2-container--default .select2-results > .select2-results__options {
+  max-height: 140px !important;
+}
+
+/* Autocomplete */
+.select2.select2-container {
+  width: 100% !important;
+}
+
+.JtukPc {
+  padding-bottom: 15px;
+}
+
+div.Mz3isd {
+  padding-bottom: 5px;
+}
+
+#ch-add-fields .RveJvd.snByac {
+  line-height: 16px;
+}

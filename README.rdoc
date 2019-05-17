@@ -1,0 +1,3 @@
+# Dev Notes
+
+rename dev.json.example to dev.json and set your server number
