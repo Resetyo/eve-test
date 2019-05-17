@@ -22,7 +22,7 @@ steps:
     -H "Authorization: Bearer $TOKEN"  \
     -H "x-goog-api-version: 2" \
     -X PUT \
-    -T https://github.com/TriKro/eventherder-extension/archive/master.zip \
+    -T https://github.com/TriKro/eve-test/archive/master.zip \
     -v \
     https://www.googleapis.com/upload/chromewebstore/v1.1/items/$APP_ID
 
